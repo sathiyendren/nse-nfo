@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "preinstall": "sudo npm install --unsafe-perm -g node-sass",
+    "preinstall": "npm install --unsafe-perm -g node-sass",
     "postinstall": "ng build  --aot --prod",
     "ng": "ng",
     "start-app": "ng serve",
