@@ -25,7 +25,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDividerModule } from '@angular/material/divider';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -52,7 +51,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     MatPaginatorModule,
     MatGridListModule,
-    FlexLayoutModule
   ],
   exports: [
     MatTabsModule,
@@ -78,7 +76,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     MatPaginatorModule,
     MatGridListModule,
-    FlexLayoutModule
   ],
 })
 export class MyMaterialModule {}
