@@ -1,0 +1,150 @@
+<mat-card >
+    <mat-card-header>
+      <mat-card-title><b>Settings</b></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="my-form" [formGroup]="settingsForm" novalidate>
+        <mat-tab-group>
+          <mat-tab label="Application" class="my-tab">
+            <table style="width: 100%" cellspacing="10">
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Name" formControlName="appName" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <mat-label>Account</mat-label>
+                    <mat-radio-group formControlName="account" >
+                      <mat-radio-button value="paper">Paper</mat-radio-button>
+                      <mat-radio-button value="real">Real</mat-radio-button>
+                    </mat-radio-group>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>Expiry Date</mat-label>
+                    <input  formControlName="expiryDate"  matInput [matDatepicker]="picker" placeholder="Expiry Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>Capital</mat-label>
+                    <input matInput placeholder="Name" formControlName="capital" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>First Buy Constant</mat-label>
+                    <input matInput placeholder="First Buy Constant" formControlName="firstBuyConstant" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>ReBuy Constant</mat-label>
+                    <input matInput placeholder="ReBuy Constant" formControlName="reBuyConstant" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>ReBuy Cusion Constant</mat-label>
+                    <input matInput placeholder="ReBuy Cusion Constant" formControlName="reBuyCusionConstant" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>Trading Type</mat-label>
+                    <input matInput placeholder="Trading Type" formControlName="tradingType" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>Trailing StopLoss Constant</mat-label>
+                    <input matInput placeholder=">Trailing StopLoss Constant" formControlName="trailingSLConstant" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+          </mat-tab>
+          <mat-tab label="Algomojo" class="my-tab">
+            <table style="width: 100%" cellspacing="10">
+             
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>API Key</mat-label>
+                    <input matInput placeholder="API Key" formControlName="algomojoApiKey" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>API Secret</mat-label>
+                    <input matInput placeholder="API Secret" formControlName="algomojoApiSecret" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+          </mat-tab>
+          <mat-tab label="Zerodha" class="my-tab">
+            <table style="width: 100%" cellspacing="10">
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>API Key</mat-label>
+                    <input matInput placeholder="API Key" formControlName="zerodhaApiKey" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>API Secret</mat-label>
+                    <input matInput placeholder="API Secret" formControlName="zerodhaApiSecret" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>Access Token</mat-label>
+                    <input matInput placeholder="Access Token" formControlName="zerodhaAccessToken" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field>
+                    <mat-label>Request Token</mat-label>
+                    <input matInput placeholder="Request Token" formControlName="zerodhaApiSecret" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+          </mat-tab>
+        </mat-tab-group>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="onSave()" color="primary">Create</button>
+    </mat-card-actions>
+  </mat-card>

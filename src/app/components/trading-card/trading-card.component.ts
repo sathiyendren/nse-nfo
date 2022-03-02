@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 @Component({
-  selector: 'app-customer-create',
-  templateUrl: './customer-create.component.html',
-  styleUrls: ['./customer-create.component.css']
+  selector: 'app-trading-card',
+  templateUrl: './trading-card.component.html',
+  styleUrls: ['./trading-card.component.css']
 })
-export class CustomerCreateComponent implements OnInit {
+export class TradingCardComponent implements OnInit {
   name: string = "";
   email: string = "";
   job: string = "";
@@ -14,10 +14,12 @@ export class CustomerCreateComponent implements OnInit {
   selectedGender: string = "male";
   isCompany : boolean = false;
   createdAt = new FormControl(new Date());
-
-  constructor() { }
-  public createCustomer(){
-
+  
+  constructor() {
+    localStorage.setItem('login-page', 'false');
+   }
+  public onBuy(optionForm){
+    debugger;
   }
   ngOnInit() {
   }

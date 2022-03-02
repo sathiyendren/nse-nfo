@@ -1,0 +1,28 @@
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    margin-bottom: 16px;
+}
+
+.column-label {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+.column {
+    float: left;
+    width: 47%;
+    padding: 1rem;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

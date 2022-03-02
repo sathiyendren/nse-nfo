@@ -1,0 +1,55 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+
+  .mat-form-field {
+    width: 100%;
+    min-width: 200px;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .error {
+    padding: 16px;
+    width: 300px;
+    color: white;
+    background-color: red;
+  }
+
+  .button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .card-container {
+    /*  not needed styles to reflect it */ 
+    background: blue;
+    padding: 10px;
+    color: white;
+    width: 500px;
+  
+    /* needed styles below */
+    display: flex;
+    justify-content: space-between;
+  }
+  .mat-card-header-text {
+      width: 100%;
+  }
+
+  .container {
+    display: flex;
+  }
+  
+  .fill {
+    flex: 1;
+  }
+
+  .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none !important;
+  }

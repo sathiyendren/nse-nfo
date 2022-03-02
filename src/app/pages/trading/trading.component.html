@@ -1,0 +1,10 @@
+
+<div class="row">
+  <div class="column" *ngFor="let tile of tiles" >
+<app-trading-card></app-trading-card>
+  </div>
+</div>
+
+<button class="md-fab-bottom-right" mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="addOptions()">
+  <mat-icon>add</mat-icon>
+</button>

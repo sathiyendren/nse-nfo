@@ -1,13 +1,11 @@
-<mat-toolbar color="primary" class="fixed-header">
+<mat-toolbar color="primary" class="fixed-header" *ngIf="isLoginPage()">
   <mat-toolbar-row>
-    <span><img src="./assets/logo.png" style="width:50px;"></span>
+    <span><img src="./assets/logo.png" href="/" style="width:50px;"></span>
     
-    <a mat-button routerLink="/customer-create" routerLinkActive="active" >Trading</a>
-    <a mat-button routerLink="/customer-create" routerLinkActive="active" >Option Chain</a>
-    <a mat-button routerLink="/customer-list" >Transactions</a>
-    <a mat-button routerLink="/login">Settings</a>
-
-    
+    <a mat-button routerLink="/trading" routerLinkActive="active" >Trading</a>
+    <a mat-button routerLink="/option-chain" >Option Chain</a>
+    <a mat-button routerLink="/transactions" >Transactions</a>
+    <a mat-button routerLink="/setting">Settings</a>
   </mat-toolbar-row>
 </mat-toolbar>
 
